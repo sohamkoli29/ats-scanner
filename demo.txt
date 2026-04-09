@@ -1,0 +1,39 @@
+ARJUN MEHTA
+Pune, Maharashtra | arjun.mehta@email.com | github.com/arjunmehta | linkedin.com/in/arjunmehta
+
+SUMMARY
+Results-driven Software Engineer with 3 years of experience building scalable web applications
+and data pipelines. Proficient in Python, React, and cloud infrastructure. Passionate about
+machine learning, API design, and delivering high-impact products in agile environments.
+
+SKILLS
+Languages:     Python, JavaScript, TypeScript, SQL, Bash
+Frameworks:    React, Node.js, Flask, Django, Express
+ML/Data:       scikit-learn, pandas, numpy, TensorFlow (basic)
+Cloud/DevOps:  AWS (EC2, S3, Lambda), Docker, GitHub Actions, CI/CD
+Databases:     PostgreSQL, MongoDB, Redis
+Tools:         Git, Jira, Figma, Linux
+
+EXPERIENCE
+
+Software Engineer — DataBridge Solutions, Pune (Jan 2022 – Present)
+- Developed and deployed 3 REST APIs using Flask and PostgreSQL, reducing data fetch time by 40%
+- Built a React dashboard for real-time analytics, improving team productivity by 25%
+- Implemented CI/CD pipelines using GitHub Actions and Docker, cutting deployment time by 35%
+- Led a team of 4 engineers to migrate a monolith to microservices architecture on AWS
+
+Junior Developer — Hexnode Technologies, Pune (Jun 2021 – Dec 2021)
+- Built internal tools using Node.js and MongoDB for automating HR workflows
+- Collaborated with cross-functional teams in an agile/scrum environment
+- Wrote unit and integration tests improving code coverage from 42% to 78%
+
+EDUCATION
+B.E. Computer Engineering — Pune University, 2021  |  CGPA: 8.4 / 10
+
+PROJECTS
+- Resume ATS Scanner: NLP tool using TF-IDF and cosine similarity to score resumes (Python, Flask, React)
+- Stock Price Predictor: LSTM model trained on NSE data achieving 87% directional accuracy (TensorFlow, pandas)
+
+CERTIFICATIONS
+- AWS Certified Cloud Practitioner (2023)
+- Google Data Analytics Certificate (2022)

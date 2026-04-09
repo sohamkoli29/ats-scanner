@@ -32,12 +32,32 @@ def extract_text_from_pdf(file_stream):
     return text
 
 
+
 def extract_text_from_docx(file_stream):
-    """Extract text from a DOCX file."""
+    """Extract text from a DOCX file including tables."""
     try:
         doc = docx.Document(file_stream)
-        paragraphs = [para.text for para in doc.paragraphs if para.text.strip()]
-        return "\n".join(paragraphs)
+        texts = []
+
+        # Paragraphs
+        for para in doc.paragraphs:
+            if para.text.strip():
+                texts.append(para.text)
+
+        # Tables
+        for table in doc.tables:
+            for row in table.rows:
+                for cell in row.cells:
+                    if cell.text.strip():
+                        texts.append(cell.text.strip())
+
+        # Headers & Footers
+        for section in doc.sections:
+            for para in section.header.paragraphs + section.footer.paragraphs:
+                if para.text.strip():
+                    texts.append(para.text)
+
+        return "\n".join(texts)
     except Exception as e:
         return ""
 
