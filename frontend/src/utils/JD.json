@@ -1,0 +1,98 @@
+[
+  {
+    "role": "Frontend Developer",
+    "category": "Engineering",
+    "jd": "We are looking for a skilled Frontend Developer to join our growing team.\n\nResponsibilities:\n- Build responsive, accessible web interfaces using React and TypeScript\n- Collaborate with designers to implement pixel-perfect UI from Figma designs\n- Optimize application performance using code splitting, lazy loading, and caching strategies\n- Write unit and integration tests using Jest and React Testing Library\n- Maintain and improve our component library built on Tailwind CSS and shadcn/ui\n\nRequirements:\n- 2+ years of experience with React.js and modern JavaScript (ES6+)\n- Strong proficiency in HTML5, CSS3, and Tailwind CSS\n- Experience with state management (Redux Toolkit or Zustand)\n- Familiarity with RESTful APIs and GraphQL\n- Knowledge of Git version control and CI/CD pipelines\n- Experience with Vite or Webpack build tools\n- Bonus: TypeScript, Next.js, Framer Motion, WebSockets"
+  },
+  {
+    "role": "Backend Developer",
+    "category": "Engineering",
+    "jd": "Join us as a Backend Developer to build scalable APIs and services.\n\nResponsibilities:\n- Design and develop RESTful and GraphQL APIs using Node.js and Express\n- Build and maintain microservices with Docker and Kubernetes\n- Optimize database queries in PostgreSQL, MongoDB, and Redis\n- Implement authentication and authorization using JWT and OAuth2\n- Write comprehensive unit and integration tests with Jest and Supertest\n- Monitor application health and performance using Datadog and Sentry\n\nRequirements:\n- 2+ years backend development experience with Node.js or Python\n- Strong knowledge of Express.js or FastAPI\n- Proficiency with relational databases (PostgreSQL, MySQL) and NoSQL (MongoDB)\n- Experience with caching strategies using Redis\n- Familiarity with message queues (RabbitMQ, Kafka)\n- Understanding of Docker, container orchestration, and cloud platforms (AWS/GCP)\n- Knowledge of REST API design principles and security best practices\n- Bonus: Microservices architecture, Terraform, WebSockets"
+  },
+  {
+    "role": "Full Stack Developer",
+    "category": "Engineering",
+    "jd": "We're hiring a Full Stack Developer to own features end-to-end.\n\nResponsibilities:\n- Develop full-stack features using React on the frontend and Node.js/Express on the backend\n- Design MongoDB schemas and optimize queries for performance at scale\n- Integrate third-party APIs including Stripe, Twilio, and Google Maps\n- Deploy applications on Vercel, Render, and AWS with CI/CD pipelines\n- Implement real-time features using WebSockets and Socket.IO\n- Participate in code reviews and contribute to technical architecture decisions\n\nRequirements:\n- 2+ years experience with MERN stack (MongoDB, Express, React, Node.js)\n- Proficiency in JavaScript/TypeScript, HTML5, CSS3\n- Experience with Tailwind CSS and component libraries (shadcn/ui, Material UI)\n- Familiarity with Redux Toolkit or React Query for state/data management\n- Knowledge of JWT authentication and session management\n- Version control with Git and collaborative workflows (GitHub, GitLab)\n- Bonus: Next.js, Supabase, Docker, GraphQL, Stripe integration"
+  },
+  {
+    "role": "DevOps Engineer",
+    "category": "Infrastructure",
+    "jd": "We are seeking a DevOps Engineer to streamline our development and deployment workflows.\n\nResponsibilities:\n- Design and maintain CI/CD pipelines using GitHub Actions, Jenkins, or CircleCI\n- Manage Kubernetes clusters and containerized workloads with Docker\n- Provision and manage cloud infrastructure on AWS using Terraform and CloudFormation\n- Monitor system reliability and performance with Prometheus, Grafana, and the ELK stack\n- Implement security best practices including secrets management and vulnerability scanning\n- Automate infrastructure provisioning and configuration with Ansible\n\nRequirements:\n- 2+ years of DevOps or SRE experience\n- Strong proficiency with Docker and Kubernetes (EKS/GKE)\n- Hands-on experience with AWS (EC2, S3, RDS, Lambda, ECS)\n- Knowledge of infrastructure-as-code with Terraform or Pulumi\n- Scripting skills in Bash and Python\n- Experience with monitoring and logging stacks (Prometheus, Grafana, ELK)\n- Familiarity with GitOps workflows and ArgoCD\n- Bonus: Istio service mesh, Helm charts, cost optimization"
+  },
+  {
+    "role": "Data Scientist",
+    "category": "Data & AI",
+    "jd": "We are hiring a Data Scientist to derive insights and build ML models.\n\nResponsibilities:\n- Build, train, and deploy machine learning models using scikit-learn, XGBoost, and PyTorch\n- Perform exploratory data analysis and feature engineering on large datasets\n- Develop ETL pipelines for data collection, cleaning, and transformation using pandas and PySpark\n- Create dashboards and visualizations with Tableau, Power BI, and Matplotlib\n- Collaborate with product teams to translate business problems into analytical solutions\n- A/B test product features and analyze experiment results\n\nRequirements:\n- Bachelor's or Master's degree in Computer Science, Statistics, or related field\n- 2+ years of experience in data science or machine learning\n- Proficiency in Python (pandas, NumPy, scikit-learn, PyTorch or TensorFlow)\n- Strong background in statistics, probability, and linear algebra\n- Experience with SQL and NoSQL databases\n- Familiarity with cloud ML platforms (AWS SageMaker, GCP Vertex AI)\n- Knowledge of NLP techniques (TF-IDF, embeddings, transformers)\n- Bonus: MLOps, LLM fine-tuning, Apache Spark, Airflow"
+  },
+  {
+    "role": "Machine Learning Engineer",
+    "category": "Data & AI",
+    "jd": "Join our AI team as an ML Engineer to productionize intelligent systems.\n\nResponsibilities:\n- Design and implement ML pipelines from data ingestion to model deployment\n- Fine-tune and optimize large language models (LLMs) using LoRA and PEFT techniques\n- Build model serving infrastructure with FastAPI, TorchServe, and Triton Inference Server\n- Implement MLOps practices using MLflow, DVC, and Weights & Biases\n- Optimize model inference for latency and throughput using ONNX and TensorRT\n- Collaborate with data scientists to transition research models to production\n\nRequirements:\n- 2+ years experience in ML engineering or applied research\n- Strong Python skills with PyTorch and/or TensorFlow\n- Experience with transformer architectures and Hugging Face ecosystem\n- Knowledge of vector databases (Pinecone, Weaviate, Chroma)\n- Familiarity with RAG pipelines and LLM orchestration (LangChain, LlamaIndex)\n- Experience deploying models with Docker and Kubernetes\n- Understanding of model evaluation, monitoring, and drift detection\n- Bonus: CUDA optimization, distributed training, OpenAI/Anthropic API integration"
+  },
+  {
+    "role": "Product Manager",
+    "category": "Product",
+    "jd": "We're looking for a Product Manager to drive product vision and execution.\n\nResponsibilities:\n- Define and own the product roadmap aligned with business objectives and user needs\n- Write detailed PRDs, user stories, and acceptance criteria for engineering teams\n- Conduct user research, usability testing, and competitive analysis\n- Collaborate cross-functionally with engineering, design, marketing, and sales\n- Define KPIs and success metrics; analyze product performance with Mixpanel and Amplitude\n- Manage the product backlog and run agile sprint ceremonies in Jira\n\nRequirements:\n- 3+ years of product management experience in a B2B or B2C SaaS environment\n- Demonstrated ability to ship products end-to-end from ideation to launch\n- Strong analytical skills with SQL and BI tools (Looker, Tableau)\n- Experience with agile/scrum methodologies\n- Excellent written and verbal communication skills\n- Ability to prioritize ruthlessly in ambiguous, fast-moving environments\n- Familiarity with UX principles and working with Figma\n- Bonus: Technical background, growth product experience, AI/ML product exposure"
+  },
+  {
+    "role": "UI/UX Designer",
+    "category": "Design",
+    "jd": "We are searching for a UI/UX Designer to create exceptional user experiences.\n\nResponsibilities:\n- Design intuitive, accessible user interfaces for web and mobile applications\n- Conduct user research, create personas, and map user journeys\n- Produce wireframes, prototypes, and high-fidelity mockups in Figma\n- Build and maintain a scalable design system with reusable components\n- Conduct usability testing and iterate based on user feedback and data\n- Collaborate closely with frontend developers to ensure design fidelity\n\nRequirements:\n- 2+ years of UI/UX design experience for digital products\n- Expert proficiency in Figma including auto-layout, components, and variables\n- Strong portfolio demonstrating end-to-end design process\n- Understanding of interaction design principles and accessibility (WCAG 2.1)\n- Experience with user research methods (interviews, surveys, card sorting)\n- Knowledge of design handoff workflows and developer collaboration\n- Familiarity with motion design (Lottie, Framer)\n- Bonus: HTML/CSS knowledge, Framer prototyping, design tokens"
+  },
+  {
+    "role": "Android Developer",
+    "category": "Mobile",
+    "jd": "We're hiring an Android Developer to build world-class mobile apps.\n\nResponsibilities:\n- Develop and maintain Android applications in Kotlin and Java using Jetpack Compose\n- Implement clean architecture patterns (MVVM, MVI) with Hilt dependency injection\n- Integrate REST APIs using Retrofit and manage async operations with Kotlin Coroutines\n- Implement Room database for local persistence and offline-first capabilities\n- Write unit and instrumented tests with JUnit, Mockito, and Espresso\n- Publish and maintain apps on Google Play Store including release management\n\nRequirements:\n- 2+ years of Android development experience\n- Strong proficiency in Kotlin and familiarity with Java\n- Experience with Jetpack libraries: Compose, Navigation, ViewModel, LiveData/Flow\n- Knowledge of Material Design 3 guidelines\n- Familiarity with Firebase (Crashlytics, Analytics, Cloud Messaging)\n- Understanding of Android lifecycle, permissions, and background processing\n- Experience with Google Play Billing and AdMob integration\n- Bonus: KMM, Wear OS, ARCore, NFC integration"
+  },
+  {
+    "role": "Cybersecurity Analyst",
+    "category": "Security",
+    "jd": "Join our security team as a Cybersecurity Analyst to protect our systems.\n\nResponsibilities:\n- Monitor security events and incidents using SIEM tools (Splunk, Microsoft Sentinel)\n- Conduct vulnerability assessments and penetration testing using Nmap, Metasploit, and Burp Suite\n- Perform threat intelligence analysis and develop detection rules\n- Investigate and respond to security incidents following NIST and MITRE ATT&CK frameworks\n- Implement and audit security policies, access controls, and compliance (SOC 2, ISO 27001)\n- Conduct security awareness training for employees\n\nRequirements:\n- 2+ years of experience in cybersecurity, SOC, or information security\n- Knowledge of networking protocols (TCP/IP, DNS, HTTP, TLS)\n- Experience with SIEM platforms and log analysis\n- Familiarity with penetration testing methodologies and tools\n- Understanding of cloud security on AWS or Azure\n- Scripting skills in Python or Bash for automation\n- Relevant certifications: CompTIA Security+, CEH, or CISSP preferred\n- Bonus: OSCP, cloud security certifications, malware analysis"
+  },
+  {
+  "role": "QA Engineer",
+  "category": "Engineering",
+  "jd": "We are looking for a QA Engineer to ensure product quality and reliability.\n\nResponsibilities:\n- Design and execute manual and automated test cases\n- Develop automation scripts using Selenium, Cypress, or Playwright\n- Perform API testing using Postman or REST Assured\n- Identify, document, and track bugs using Jira or similar tools\n- Collaborate with developers to ensure high-quality releases\n\nRequirements:\n- 1-3 years of experience in QA or software testing\n- Knowledge of testing methodologies and SDLC/STLC\n- Experience with automation tools (Selenium, Cypress)\n- Familiarity with API testing and debugging\n- Basic programming skills in JavaScript, Java, or Python\n- Bonus: CI/CD integration, performance testing"
+},
+{
+  "role": "Cloud Engineer",
+  "category": "Infrastructure",
+  "jd": "We are hiring a Cloud Engineer to build and maintain scalable cloud systems.\n\nResponsibilities:\n- Design and deploy cloud infrastructure on AWS, Azure, or GCP\n- Automate deployments using Terraform or CloudFormation\n- Manage cloud networking, security, and scaling\n- Monitor cloud resources and optimize cost\n- Implement backup and disaster recovery strategies\n\nRequirements:\n- 2+ years of cloud engineering experience\n- Strong knowledge of AWS, Azure, or GCP\n- Experience with infrastructure-as-code tools\n- Familiarity with Docker and Kubernetes\n- Understanding of networking and security best practices\n- Bonus: Multi-cloud architecture, serverless computing"
+},
+{
+  "role": "Software Engineer Intern",
+  "category": "Engineering",
+  "jd": "We are looking for a Software Engineer Intern to join our development team.\n\nResponsibilities:\n- Assist in developing web and backend applications\n- Write clean and maintainable code\n- Participate in code reviews and debugging\n- Learn and apply best coding practices\n\nRequirements:\n- Pursuing a degree in Computer Science or related field\n- Basic knowledge of programming (Java, Python, or JavaScript)\n- Understanding of data structures and algorithms\n- Familiarity with Git\n- Eagerness to learn and grow\n- Bonus: Personal projects or internships"
+},
+{
+  "role": "iOS Developer",
+  "category": "Mobile",
+  "jd": "We are seeking an iOS Developer to build high-quality mobile applications.\n\nResponsibilities:\n- Develop iOS applications using Swift and UIKit/SwiftUI\n- Integrate REST APIs and third-party SDKs\n- Maintain code quality and performance\n- Collaborate with designers and backend teams\n\nRequirements:\n- 2+ years of iOS development experience\n- Proficiency in Swift\n- Experience with Xcode and iOS frameworks\n- Knowledge of app lifecycle and memory management\n- Familiarity with Apple App Store deployment\n- Bonus: Combine framework, CoreData, ARKit"
+},
+
+{
+  "role": "Business Analyst",
+  "category": "Business",
+  "jd": "We are looking for a Business Analyst to bridge business needs and technical solutions.\n\nResponsibilities:\n- Gather and analyze business requirements\n- Create functional specifications and documentation\n- Work with stakeholders and development teams\n- Conduct data analysis and reporting\n\nRequirements:\n- 2+ years of experience in business analysis\n- Strong analytical and problem-solving skills\n- Experience with SQL and Excel\n- Good communication and stakeholder management\n- Bonus: Knowledge of Agile methodologies"
+},
+{
+  "role": "Site Reliability Engineer",
+  "category": "Infrastructure",
+  "jd": "We are hiring an SRE to ensure system reliability and scalability.\n\nResponsibilities:\n- Monitor system performance and uptime\n- Automate operations and incident response\n- Improve system reliability and scalability\n- Work with DevOps and engineering teams\n\nRequirements:\n- 2+ years of experience in SRE/DevOps\n- Knowledge of Linux systems and networking\n- Experience with monitoring tools (Prometheus, Grafana)\n- Scripting skills (Python, Bash)\n- Bonus: Kubernetes, cloud platforms"
+},
+{
+  "role": "Game Developer",
+  "category": "Engineering",
+  "jd": "We are looking for a Game Developer to create engaging gaming experiences.\n\nResponsibilities:\n- Develop games using Unity or Unreal Engine\n- Implement game mechanics and physics\n- Optimize game performance\n- Collaborate with designers and artists\n\nRequirements:\n- 1-3 years of game development experience\n- Proficiency in C# or C++\n- Experience with Unity or Unreal Engine\n- Understanding of game design principles\n- Bonus: Multiplayer systems, AR/VR"
+},
+{
+  "role": "AI Engineer",
+  "category": "Data & AI",
+  "jd": "We are seeking an AI Engineer to build intelligent systems and applications.\n\nResponsibilities:\n- Develop AI models and integrate them into applications\n- Work with NLP, computer vision, or recommendation systems\n- Optimize model performance and scalability\n- Collaborate with data scientists and engineers\n\nRequirements:\n- 2+ years of experience in AI/ML\n- Strong Python skills and ML frameworks\n- Knowledge of deep learning and NLP\n- Experience with APIs and deployment\n- Bonus: LLMs, generative AI, MLOps"
+},
+{
+  "role": "Content Writer",
+  "category": "Marketing",
+  "jd": "We are hiring a Content Writer to create engaging and high-quality content.\n\nResponsibilities:\n- Write blogs, articles, and website content\n- Conduct research on industry topics\n- Optimize content for SEO\n- Collaborate with marketing teams\n\nRequirements:\n- 1-3 years of content writing experience\n- Strong writing and editing skills\n- Knowledge of SEO best practices\n- Ability to meet deadlines\n- Bonus: Technical writing, social media content"
+}
+]

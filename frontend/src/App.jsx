@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import axios from 'axios'
-import { Scan, ChevronRight, AlertCircle, FileSearch, RotateCcw } from 'lucide-react'
+import { Scan, ChevronRight, AlertCircle, FileSearch, RotateCcw, ChevronDown, Briefcase, Check } from 'lucide-react'
+import JD_TEMPLATES from './utils/JD.json'
 import DropZone from './components/DropZone'
 import ScoreRing from './components/ScoreRing'
 import SkillsPanel from './components/SkillsPanel'
@@ -11,6 +12,9 @@ import LoadingSkeleton from './components/LoadingSkeleton'
 
 const API_BASE = import.meta.env.VITE_API_URL || '/api'
 
+
+const CATEGORIES = ['All', ...Array.from(new Set(JD_TEMPLATES.map(t => t.category)))]
+
 export default function App() {
   const [resumeFile, setResumeFile] = useState(null)
   const [jdText, setJdText] = useState('')
@@ -18,7 +22,34 @@ export default function App() {
   const [result, setResult] = useState(null)
   const [errors, setErrors] = useState([])
 
+  // Dropdown state
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [activeCategory, setActiveCategory] = useState('All')
+  const [selectedRole, setSelectedRole] = useState(null)
+  const dropdownRef = useRef(null)
+
   const canSubmit = resumeFile && jdText.trim().length >= 50 && !loading
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handler = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [])
+
+  const handleSelectRole = (template) => {
+    setJdText(template.jd)
+    setSelectedRole(template.role)
+    setDropdownOpen(false)
+  }
+
+  const filteredTemplates = activeCategory === 'All'
+    ? JD_TEMPLATES
+    : JD_TEMPLATES.filter(t => t.category === activeCategory)
 
   const handleAnalyze = async () => {
     setErrors([])
@@ -51,6 +82,7 @@ export default function App() {
     setErrors([])
     setResumeFile(null)
     setJdText('')
+    setSelectedRole(null)
   }
 
   return (
@@ -108,16 +140,121 @@ export default function App() {
               className="rounded-2xl border border-cream bg-white/50 p-6 animate-fade-up stagger-2"
               style={{ backdropFilter: 'blur(8px)' }}
             >
-              <label className="block font-display font-semibold text-sm mb-3">
-                02 — Job Description
-              </label>
+              {/* Label row with dropdown trigger */}
+              <div className="flex items-center justify-between mb-3">
+                <label className="block font-display font-semibold text-sm">
+                  02 — Job Description
+                </label>
+
+                {/* ── Role Selector Dropdown ── */}
+                <div className="relative" ref={dropdownRef}>
+                  <button
+                    type="button"
+                    onClick={() => setDropdownOpen((v) => !v)}
+                    className={`
+                      flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-body font-medium
+                      transition-all duration-150 cursor-pointer
+                      ${dropdownOpen
+                        ? 'bg-ink text-paper border-ink'
+                        : 'bg-cream border-cream hover:border-muted text-ink hover:bg-cream/80'
+                      }
+                    `}
+                  >
+                    <Briefcase size={11} />
+                    {selectedRole ? (
+                      <span className="max-w-[100px] truncate">{selectedRole}</span>
+                    ) : (
+                      'Select Role'
+                    )}
+                    <ChevronDown
+                      size={11}
+                      className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`}
+                    />
+                  </button>
+
+                  {/* Dropdown Panel */}
+                  {dropdownOpen && (
+                    <div
+                      className="absolute right-0 top-full mt-2 w-72 rounded-2xl border border-cream bg-white shadow-xl z-50 overflow-hidden"
+                      style={{ boxShadow: '0 8px 32px rgba(0,0,0,0.10)' }}
+                    >
+                      {/* Category filter pills */}
+                      <div className="flex gap-1.5 p-3 border-b border-cream overflow-x-auto scrollbar-none flex-wrap">
+                        {CATEGORIES.map((cat) => (
+                          <button
+                            key={cat}
+                            type="button"
+                            onClick={() => setActiveCategory(cat)}
+                            className={`
+                              flex-shrink-0 px-2.5 py-1 rounded-full text-xs font-mono font-medium transition-colors
+                              ${activeCategory === cat
+                                ? 'bg-ink text-paper'
+                                : 'bg-cream text-muted hover:bg-cream/80 hover:text-ink'
+                              }
+                            `}
+                          >
+                            {cat}
+                          </button>
+                        ))}
+                      </div>
+
+                      {/* Role list */}
+                      <div className="max-h-64 overflow-y-auto">
+                        {filteredTemplates.map((template) => (
+                          <button
+                            key={template.role}
+                            type="button"
+                            onClick={() => handleSelectRole(template)}
+                            className="w-full text-left px-4 py-3 hover:bg-cream/60 transition-colors flex items-center justify-between group border-b border-cream/60 last:border-0"
+                          >
+                            <div>
+                              <p className="text-sm font-body font-medium text-ink group-hover:text-teal transition-colors">
+                                {template.role}
+                              </p>
+                              <p className="text-xs text-muted font-mono mt-0.5">{template.category}</p>
+                            </div>
+                            {selectedRole === template.role ? (
+                              <Check size={13} className="text-teal flex-shrink-0" />
+                            ) : (
+                              <ChevronRight size={13} className="text-muted opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                            )}
+                          </button>
+                        ))}
+                      </div>
+
+                      {/* Footer hint */}
+                      <div className="px-4 py-2.5 border-t border-cream bg-cream/30">
+                        <p className="text-xs text-muted font-mono">
+                          Template loads as editable text
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Selected role badge */}
+              {selectedRole && (
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-teal/10 border border-teal/20 text-teal text-xs font-mono">
+                    <Briefcase size={10} />
+                    {selectedRole}
+                  </span>
+                  <span className="text-muted text-xs">— editable below</span>
+                </div>
+              )}
+
               <textarea
                 className="w-full h-48 rounded-xl border border-cream bg-paper p-4 text-sm font-body
                            resize-none focus:outline-none focus:border-teal transition-colors
                            placeholder:text-muted/60"
-                placeholder="Paste the full job description here…&#10;&#10;We use NLP to compare skills, keywords, and context against your resume."
+                placeholder="Paste the full job description here…&#10;&#10;Or use 'Select Role' above to load a template."
                 value={jdText}
-                onChange={(e) => setJdText(e.target.value)}
+                onChange={(e) => {
+                  setJdText(e.target.value)
+                  // If user edits, clear the selected role badge so it feels "custom"
+                  // but keep the text — only swap happens when a new role is selected
+                }}
               />
               <div className="flex justify-between mt-1.5">
                 <span className="text-muted text-xs">Min. 50 characters</span>
