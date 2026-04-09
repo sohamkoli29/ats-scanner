@@ -38,6 +38,8 @@ ats-scanner/
 │           ├── SuggestionsPanel.jsx
 │           ├── KeywordDensityChart.jsx
 │           └── LoadingSkeleton.jsx
+|       └── utils/
+|           └── JD.json
 ├── requirements.txt
 └── README.md
 ```
